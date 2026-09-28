@@ -14,9 +14,9 @@ const ytOf = (s = '') => (String(s).match(/(?:youtu\.be\/|youtube\.com\/(?:watch
 const media = (src, poster = '') => {
   const [url, fb] = String(src).split('|');   // 'YouTube 주소|사이트 안 대체 영상'
   const yt = ytOf(url);
-  if (yt) return `<div class="g-media g-yt-embed">${fb ? `<video class="yt-fallback" src="${esc(fb)}" muted loop playsinline autoplay preload="auto"></video>` : ''}<iframe src="https://www.youtube.com/embed/${yt}?autoplay=1&mute=1&loop=1&playlist=${yt}&controls=0&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&cc_lang_pref=none&enablejsapi=1&origin=${encodeURIComponent(location.origin)}" title="YouTube" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1"></iframe></div>`;
+  if (yt) return `<div class="g-media g-yt-embed">${fb ? `<video class="yt-fallback" data-src="${esc(fb)}" muted loop playsinline autoplay preload="auto"></video>` : ''}<iframe src="https://www.youtube.com/embed/${yt}?autoplay=1&mute=1&loop=1&playlist=${yt}&controls=0&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&cc_lang_pref=none&enablejsapi=1&origin=${encodeURIComponent(location.origin)}" title="YouTube" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1"></iframe></div>`;
   return isVideo(src)
-    ? `<video class="g-media" src="${esc(src)}"${poster ? ` poster="${esc(poster)}"` : ''} muted loop playsinline autoplay preload="${poster ? 'auto' : 'metadata'}" data-lazyplay></video>`
+    ? `<video class="g-media" data-src="${esc(src)}"${poster ? ` poster="${esc(poster)}"` : ''} muted loop playsinline autoplay preload="${poster ? 'auto' : 'metadata'}" data-lazyplay></video>`
     : `<img class="g-media" src="${esc(src)}" alt="" loading="lazy">`;
 };
 const pad = (n) => String(n).padStart(2, '0');
@@ -208,6 +208,20 @@ function buildInner(fig, cfg, { mountDrum }) {
   } });
 }
 
+/* 0928: 영상 지연 로딩 — 화면에서 1.5화면 안으로 들어올 때만 내려받기 시작 (첫 진입 전송량 축소) */
+const lazyIO = 'IntersectionObserver' in window ? new IntersectionObserver((ents) => {
+  ents.forEach((en) => {
+    if (!en.isIntersecting) return;
+    const v = en.target;
+    if (v.dataset.src && !v.src) { v.src = v.dataset.src; v.load(); if (v.autoplay) v.play().catch(() => {}); }
+    lazyIO.unobserve(v);
+  });
+}, { rootMargin: '150% 0px 150% 0px' }) : null;
+export function lazyVideos(root = document) {
+  root.querySelectorAll('video[data-src]:not([src])').forEach((v) => {
+    if (lazyIO) lazyIO.observe(v); else { v.src = v.dataset.src; }
+  });
+}
 export function updateGalleries() {
   for (let i = live.length - 1; i >= 0; i--) {
     const g = live[i];
@@ -248,6 +262,7 @@ setInterval(pingYT, 700);
 export function buildGallery(fig, cfg, opts) {
   buildInner(fig, cfg, opts);
   if (cfg.sound) addSound(fig);
+  lazyVideos(fig);
 }
 const soundFigs = [];
 let soundOn = false;

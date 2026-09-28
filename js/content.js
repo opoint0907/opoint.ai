@@ -52,7 +52,7 @@
         caption: false, images: [img(usmef, 0), img(usmef, 1), L(2), L(4), L(8)].filter(Boolean) },
       // 07장 — 브랜드 필름 샘플
       s07_film: { tag: '영상', spec: '브랜드 필름', ratio: '16 / 9', mode: 'single', sound: true,
-        caption: false, poster: 'assets/film/brand_poster.jpg', images: ['assets/film/brand_film.mp4'] },   // 0928: 캡션 삭제 · 로딩 중 첫 프레임 스틸
+        caption: false, poster: 'assets/film/brand_poster.jpg', images: ['assets/film/brand_film_lite.mp4'] },   // 인라인은 경량본(960p·5MB) · PLAY FILM 은 원본   // 0928: 캡션 삭제 · 로딩 중 첫 프레임 스틸
       // 13장 — 로고 영상 / 크루 4인 이미지   (02_회사소개서/3. OPOINT IP/13_로고영상_크루4인)
       s13_video: { tag: '영상', spec: '로고 영상 ／ 크루 4인 이미지', ratio: '16 / 9', mode: 'reveal',
         caption: 'OPOINT IP — CREW 4 · RAM · CHLOE · ILYR · YEON', hold: 0.25,
@@ -60,7 +60,7 @@
         images: ['assets/ip/char/char_01.webp', 'assets/ip/char/char_02.webp', 'assets/ip/char/char_03.webp', 'assets/ip/char/char_04.webp', 'assets/ip/char/char_05.webp'] },
       // 14장 — 트레일러   (02_회사소개서/3. OPOINT IP/14_트레일러 · 전체 재생은 PLAY TRAILER)
       s14_trailer: { tag: '영상', spec: '트레일러', ratio: '16 / 9', mode: 'single', fit: 'contain', sound: true,
-        caption: false, images: ['assets/ip/ip_trailer.mp4'] },   // v8: 트레일러 전체를 화면에 꽉 차게(무음 반복) · 소리는 PLAY TRAILER
+        caption: false, poster: 'assets/ip/ip_trailer.jpg', images: ['assets/ip/ip_trailer_lite.mp4'] },   // 인라인은 앞 30초 경량본 · PLAY TRAILER 는 원본   // v8: 트레일러 전체를 화면에 꽉 차게(무음 반복) · 소리는 PLAY TRAILER
       // 15장 — POV 캐릭터 영상 (Opoint 유튜브 · 상은님 지정 순서 그대로 · 썸네일: 02_회사소개서/3. OPOINT IP/15_편성표_설정집 01~08)
       s15_doc: { tag: '영상', spec: '12주 편성표 + 교차곡선 / 설정집 문서 스프레드', ratio: '16 / 9', mode: 'yt',
         caption: false,
