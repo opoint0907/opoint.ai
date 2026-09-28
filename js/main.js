@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { SYMBOL_SVG, WORDMARK_SVG } from './logo-paths.js?v=20260928e';
-import { ringHullTextures, dotHullTextures, haloTexture } from './hull-texture.js?v=20260928e';
-import { Drums } from './drum.js?v=20260928e';
-import { buildGallery, updateGalleries } from './galleries.js?v=20260928e';
+import { SYMBOL_SVG, WORDMARK_SVG } from './logo-paths.js?v=20260928f';
+import { ringHullTextures, dotHullTextures, haloTexture } from './hull-texture.js?v=20260928f';
+import { Drums } from './drum.js?v=20260928f';
+import { buildGallery, updateGalleries } from './galleries.js?v=20260928f';
 
 const GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789✺';
 const C = window.OPOINT || { slots: {}, works: { youtube: [], image: [] } };
@@ -545,7 +545,7 @@ function startGL() {
   let W = 1, H = 1, halfW = 1, halfH = 1, base = 1;
   function resize() {
     W = innerWidth; H = innerHeight;
-    renderer.setPixelRatio(Math.min(devicePixelRatio, W < 760 ? 1.5 : 2));
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));   // 0928: 레티나에서 픽셀 수 44% 절감 → 스크롤 프레임 안정
     renderer.setSize(W, H, false);
     camera.aspect = W / H;
     camera.updateProjectionMatrix();
@@ -711,8 +711,9 @@ function startGL() {
     glint.position.set(ptr.sx * halfW * 0.8, ptr.sy * halfH * 0.8, 3.5);
     renderer.clear();
     drums.render(W, H, REDUCE, t);
-    renderer.clearDepth();
-    renderer.render(scene, camera);
+    // 0928: 로고·선·입자·광륜이 모두 꺼진 구간(포트폴리오 등)에서는 전체 화면 3D 렌더를 건너뛴다
+    const needScene = logo.visible || lines.visible || pMat.opacity > 0 || halo.material.opacity > 0.01;
+    if (needScene) { renderer.clearDepth(); renderer.render(scene, camera); }
     requestAnimationFrame(frame);
   }
 

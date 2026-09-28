@@ -217,9 +217,18 @@ const lazyIO = 'IntersectionObserver' in window ? new IntersectionObserver((ents
     lazyIO.unobserve(v);
   });
 }, { rootMargin: '150% 0px 150% 0px' }) : null;
+/* 화면에서 멀어진 자동재생 영상은 멈추고, 가까워지면 다시 재생 — 동시 디코딩 수를 줄여 스크롤 끊김 완화 */
+const playIO = 'IntersectionObserver' in window ? new IntersectionObserver((ents) => {
+  ents.forEach((en) => {
+    const v = en.target;
+    if (en.isIntersecting) { if (v.src && v.paused) v.play().catch(() => {}); }
+    else if (!v.paused) v.pause();
+  });
+}, { rootMargin: '35% 0px 35% 0px' }) : null;
 export function lazyVideos(root = document) {
   root.querySelectorAll('video[data-src]:not([src])').forEach((v) => {
     if (lazyIO) lazyIO.observe(v); else { v.src = v.dataset.src; }
+    if (playIO && v.autoplay) playIO.observe(v);
   });
 }
 export function updateGalleries() {
