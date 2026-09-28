@@ -1,5 +1,5 @@
 {
-  "_note": "모든 컷 공통. medias 배열 순서 = 프롬프트의 @Image 번호. char_pingping 등록 전에는 발행 금지.",
+  "_note": "⚠️ 아래 media_id는 개인 계정 값. 오포인트 계정 값으로 교체 전 발행 금지. 모든 컷 공통. medias 배열 순서 = 프롬프트의 @Image 번호. char_pingping 등록 전에는 발행 금지.",
   "model": "seedance_2_5",
   "mode": "omni_reference",
   "aspect_ratio": "9:16",
