@@ -1,0 +1,33 @@
+The only spoken words in this video are the Korean sentences inside { }. Titles, labels, numbers, timecodes and instructions are never spoken.
+
+GLOBAL STYLE: photoreal cinematic vlog, vertical 9:16, handheld selfie, warm and quiet.
+
+SPOKEN CONTENT — READ THIS FIRST
+Chloe, on camera, soft, almost whispering:
+0.3s–2.4s {핑핑아, 진짜 걱정했잖아…}
+2.8s–5.1s {오늘은 일 안 해. 너랑 쉴 거야.}
+After 5.1s nobody speaks.
+
+CLOSED CAST: exactly one young woman (@Image 1) and exactly one small floating robot (@Image 2). No one else exists in this video. Nobody passes in the background.
+CHARACTERS
+- The woman is CHLOE, taken from @Image 1: wavy short pink-and-mint hair with bangs, the side hair always covering both sides of her face, a pair of fluffy pink rabbit ears standing upright on her head, large grey eyes, rosy cheeks, a blue pendant necklace, white goggles with iridescent lenses. Outfit: pink jacket with mint shoulder panels and a small O. emblem on the chest, a clear ring-shaped zipper pull.
+- The robot is PING-PING, taken from @Image 2 exactly as drawn there: a small floating robot with an antenna ball on top of its head, two transparent rabbit-shaped ears, two small wings, and a small LED face screen that shows tiny magenta dots in the center. [PINGPING BODY SENTENCE — paste from characters.md after the official sheet is confirmed]
+- From @Image 2 take ONLY the robot. Take nothing else.
+ACTIVE REFERENCES: @Image 1 face, hair, ears and jacket. @Image 2 the robot design. @Image 3 the room.
+LOCATION: the O.Point base lounge from @Image 3 — bright, airy, soft white daylight from rounded blue-tinted windows. NOT a dark scene.
+
+FIRST FRAME AND BLOCKING: selfie at arm's length. Chloe holds Ping-Ping against her left cheek with her free hand, eyes half closed. Ping-Ping's face screen shows a small magenta heart.
+
+TIMELINE
+0.0–5.1 Chloe speaks softly, eyes closing fully by 3.0s.
+5.1–7.0 Ping-Ping leans into her cheek; Chloe smiles with closed eyes.
+7.0–7.3 A thin pink hologram beam rises from the antenna ball on Ping-Ping's head.
+7.3–8.0 A small pink hologram card appears above the antenna near the top of the frame, showing only blurred unreadable lines. Chloe's eyes stay closed; she does not see it.
+
+OPTICS AND CAMERA: 26 mm equivalent, arm-length selfie, gentle breathing sway only.
+
+AUDIO — SOUND EFFECTS AND ROOM TONE: quiet base hum. At 7.0s a soft rising hologram whoosh from the robot. No music.
+
+KOREAN DELIVERY: natural young female voice, soft and warm, no extra words.
+
+POSITIVE LOCKS: Chloe keeps the same face, hair, rabbit ears and pink jacket in every frame. Ping-Ping keeps the same design in every frame and communicates only through its LED dots, its body motion and non-speech electronic tones. No readable text anywhere. Vertical 9:16 frame; faces and key action stay in the upper 75% of the frame and away from the right 12% edge.
