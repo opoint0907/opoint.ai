@@ -579,7 +579,7 @@ function startGL() {
       [at('s16', 0.95), { x: 0, y: 0.12, s: 0.92, glow: 1.8, burst: 1 }],
       [at('s17') - vh * 0.35, { x: 0, y: 0.12, s: 0, glow: 0, burst: 1 }],   // 포폴 갤러리 전에 완전히 빠진다
       [at('contact') - vh * 0.4, { x: 0, y: 0.3, s: 0, burst: 0, metal: 1 }],
-      [at('contact') + vh * 0.25, { x: 0, y: 0.34, s: 0.46, metal: 1 }],
+      [at('contact') + vh * 0.25, { x: 0, y: 0.34, s: innerWidth <= 900 ? 0 : 0.46, metal: 1 }],   // 좁은 화면(1단 푸터)에서는 링을 숨긴다 (0928)
     ];
     const maxY = Math.max(0, document.documentElement.scrollHeight - H);
     let prev = { ...DEF };
