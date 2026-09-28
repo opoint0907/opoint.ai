@@ -1,14 +1,32 @@
 {
-  "_note": "오포인트 계정(워크스페이스 23be883d-aa3b-4171-8543-946428aff831) 값. medias 배열 순서 = 프롬프트의 @Image 번호. S1·S6은 @Image 4(담요)를 쓰지 않으므로 앞의 3개만 보낸다.",
+  "_note": "오포인트 계정(워크스페이스 23be883d-aa3b-4171-8543-946428aff831) 값. 배열 순서 = 프롬프트의 @Image 번호. S1·S3은 정확히 3개, S2만 4개를 보낸다.",
   "model": "nano_banana_pro",
   "aspect_ratio": "4:5",
   "resolution": "2k",
   "count": 1,
   "cost_per_image_credits": 2,
-  "medias": [
-    {"role": "image_references", "value": "b4708776-cb99-41f9-9dc3-a46bff999398", "_tag": "@Image 1 = char_o4_chloe"},
-    {"role": "image_references", "value": "b6d12441-4b97-4fcc-b2ff-c90b0a4ebb4a", "_tag": "@Image 2 = char_o4_pingping"},
-    {"role": "image_references", "value": "dea68f57-ee88-4c0b-bc62-6718f5be3e7f", "_tag": "@Image 3 = loc_o4_loc_lounge"},
-    {"role": "image_references", "value": "a55528e0-86c3-4cf4-98da-97430538158f", "_tag": "@Image 4 = prop_o4_prop_chloeblanket (S2~S5만)"}
-  ]
+  "ids": {
+    "chloe": "b4708776-cb99-41f9-9dc3-a46bff999398",
+    "pingping": "b6d12441-4b97-4fcc-b2ff-c90b0a4ebb4a",
+    "lounge": "dea68f57-ee88-4c0b-bc62-6718f5be3e7f",
+    "blanket": "a55528e0-86c3-4cf4-98da-97430538158f"
+  },
+  "medias_per_slide": {
+    "S1": [
+      "chloe",
+      "pingping",
+      "lounge"
+    ],
+    "S2": [
+      "chloe",
+      "pingping",
+      "lounge",
+      "blanket"
+    ],
+    "S3": [
+      "chloe",
+      "pingping",
+      "lounge"
+    ]
+  }
 }
