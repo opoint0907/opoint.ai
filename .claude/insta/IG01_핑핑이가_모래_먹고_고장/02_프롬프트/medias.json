@@ -1,14 +1,14 @@
 {
-  "_note": "⚠️ 아래 media_id는 개인 계정 값. 오포인트 계정 값으로 교체 전 발행 금지. 모든 컷 공통. medias 배열 순서 = 프롬프트의 @Image 번호. char_pingping 등록 전에는 발행 금지.",
+  "_note": "오포인트 계정(워크스페이스 23be883d-aa3b-4171-8543-946428aff831) 값. medias 배열 순서 = 프롬프트의 @Image 번호.",
   "model": "seedance_2_5",
   "mode": "omni_reference",
   "aspect_ratio": "9:16",
   "resolution": "480p",
   "generate_audio": true,
   "medias": [
-    {"role": "image_references", "value": "5b1963bc-4ac4-4a1a-b31d-7c472ed71941", "_tag": "@Image 1 = char_chloe"},
-    {"role": "image_references", "value": "<char_pingping media_id — 등록 필요>", "_tag": "@Image 2 = char_pingping"},
-    {"role": "image_references", "value": "8c80234f-8815-41d6-8b98-214a13b573f6", "_tag": "@Image 3 = loc_lounge"}
+    {"role": "image_references", "value": "b4708776-cb99-41f9-9dc3-a46bff999398", "_tag": "@Image 1 = char_o4_chloe (IN)"},
+    {"role": "image_references", "value": "b6d12441-4b97-4fcc-b2ff-c90b0a4ebb4a", "_tag": "@Image 2 = char_o4_pingping"},
+    {"role": "image_references", "value": "dea68f57-ee88-4c0b-bc62-6718f5be3e7f", "_tag": "@Image 3 = loc_o4_loc_lounge"}
   ],
   "durations": {"IG01-C1": 7, "IG01-C2": 10, "IG01-C3": 8, "IG01-C4": 8}
 }
