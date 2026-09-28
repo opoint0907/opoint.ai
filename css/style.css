@@ -351,13 +351,11 @@ main, .hdr { position: relative; z-index: 1; }
 }
 
 /* ───────── 푸터 ───────── */
-.sec.foot { padding-block: clamp(80px, 12vh, 140px) 28px; gap: clamp(48px, 8vw, 120px); justify-items: stretch; text-align: left; }
+.sec.foot { padding-block: clamp(80px, 12vh, 140px) 28px; gap: clamp(40px, 6vw, 88px); justify-items: stretch; text-align: left; }
 .sec.foot > * { max-width: none; }
 .sec.foot .foot-left, .sec.foot .foot-left > * { justify-items: start; text-align: left; margin-inline: 0; }
-.foot-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 6vw, 96px); align-items: start; max-width: none; width: 100%; }
-.foot-left { display: grid; gap: clamp(28px, 4vw, 48px); justify-items: start; }
-.foot-mark { display: block; width: clamp(160px, 22vw, 300px); color: var(--logo); line-height: 0; }
-.foot-mark [data-logo] { display: block; width: 100%; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(32px, 6vw, 96px); align-items: start; width: 100%; }
+.foot-left { display: grid; gap: clamp(24px, 3vw, 40px); justify-items: start; }
 .foot-person, .foot-company { display: grid; gap: 4px; margin: 0; }
 .foot-label { color: var(--accent); font-weight: 500; letter-spacing: 0.18em; font-size: 12px; margin: 0; }
 .foot-name { font-size: clamp(18px, 1.6vw, 22px); font-weight: 600; margin: 0; }
@@ -367,15 +365,15 @@ main, .hdr { position: relative; z-index: 1; }
 .foot-company div { display: grid; grid-template-columns: 72px 1fr; gap: 12px; font-size: 14px; line-height: 1.8; }
 .foot-company dd.mono { font-size: 13px; letter-spacing: 0.06em; }
 .foot-company dt { color: var(--ink-2); font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.08em; padding-top: 3px; line-height: 1.5; }
-.foot-copy { margin: 0; font-size: 12px; }
-.foot-right { display: grid; gap: clamp(24px, 3vw, 40px); justify-items: end; text-align: right; }
-.foot-title { margin: 0; font-family: var(--f-disp); font-weight: 400; line-height: 0.86; letter-spacing: -0.01em; font-size: clamp(80px, 11.5vw, 220px); color: var(--logo); max-width: 100%; overflow-wrap: normal; }
+.foot-right { display: grid; gap: 14px; justify-items: end; text-align: right; align-content: start; }
 .foot-actions { display: grid; gap: 14px; justify-items: end; }
 .foot-download { display: inline-block; padding: 12px 20px; font-size: 13px; letter-spacing: 0.1em; background: var(--ink); color: var(--ground); border-color: var(--ink); text-decoration: none; }
 .foot-download:hover { background: transparent; color: var(--ink); }
 .foot-mail { font-size: 13px; letter-spacing: 0.14em; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
 .foot-mail:hover { border-bottom-color: var(--ink); }
-.foot-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 18px; max-width: none; width: 100%; }
+.foot-word { margin: 0; line-height: 0; color: var(--logo); width: 100%; }
+.foot-word [data-logo] { display: block; width: 100%; }
+.foot-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 18px; width: 100%; }
 .foot-row a { color: inherit; text-decoration: none; }
 
 /* ───────── 반응형 ───────── */
@@ -383,7 +381,6 @@ main, .hdr { position: relative; z-index: 1; }
   .foot-grid { grid-template-columns: minmax(0, 1fr); }
   .foot-right { justify-items: start; text-align: left; }
   .foot-actions { justify-items: start; }
-  .foot-title { font-size: clamp(72px, 22vw, 140px); }
   .hdr { grid-template-columns: 1fr auto; }
   .hdr-nav { display: none; }
   .hdr-label { display: none; }
