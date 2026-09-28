@@ -852,24 +852,6 @@ window.OPOINT_DATA = {
     "https://youtube.com/shorts/eaLCkVBW7so?si=wMrXavVk11LFYcN7",
     "https://youtu.be/2XeJIuNqTcI?si=BmuUCLCAkJc61iWN"
    ]
-  },
-  {
-   "slide": 17,
-   "client": "",
-   "title": "함샤우트글로벌 show reel",
-   "kind": "",
-   "lines": [],
-   "images": [
-    {
-     "src": "assets/works/v17/01.webp",
-     "w": 1136,
-     "h": 591,
-     "link": "https://youtu.be/FvHv19r8Ge8?si=o3Z1aZOcrPr7M7BV"
-    }
-   ],
-   "links": [
-    "https://youtu.be/FvHv19r8Ge8?si=o3Z1aZOcrPr7M7BV"
-   ]
   }
  ],
  "brands": [

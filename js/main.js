@@ -75,10 +75,10 @@ if (filmBox) {
 function lenisRef() { return window.__opointScroll; }
 
 // 연락처
-if (C.contact && (C.contact.email || C.contact.phone)) {
+if (C.contact && C.contact.email) {
   const c = C.contact;
-  $('#contactInfo').classList.remove('dim');
-  $('#contactInfo').innerHTML = [c.email && `<a href="mailto:${esc(c.email)}">${esc(c.email)}</a>`, esc(c.phone), esc(c.address)].filter(Boolean).join('&nbsp;&nbsp;·&nbsp;&nbsp;');
+  $('#contactInfo').innerHTML = [`<a href="mailto:${esc(c.email)}">${esc(c.email)}</a>`, esc(c.phone)].filter(Boolean).join('&nbsp;&nbsp;·&nbsp;&nbsp;');
+  $$('.foot-mail, #contactPill').forEach((a) => (a.href = `mailto:${c.email}`));
 }
 
 // 17·18 포트폴리오 — Trionn 식 작업 그리드 + 상세 창
