@@ -363,6 +363,7 @@ function progressOf(el) {
   return clamp01((innerHeight * 0.8 - r.top) / (r.height * 0.9));           // 모바일: 지나가는 정도
 }
 const s06 = $('#s06');
+const cats06 = $$('.cats li', s06);
 const s10 = $('#s10');
 const map10 = $('.media-map', s10);
 const s04 = $('#s04');
@@ -379,16 +380,19 @@ function scrollFx() {
   const p6 = progressOf(s06);
   if (Math.abs(p6 - lastP06) > 0.001) {
     lastP06 = p6;
-    s06.classList.toggle('is-focus', p6 > 0.3);
+    // 0928: 8칸이 하나씩 밝아진 뒤(0~0.62) → NEW MEDIA 두 칸만 주황으로 한 번 더 강조(0.72~)
+    const n6 = cats06.length;
+    cats06.forEach((li, i) => li.style.setProperty('--lit', (REDUCE ? 1 : ease(clamp01((p6 * 1.15 * n6 - i * 0.62) / 0.9))).toFixed(3)));
+    s06.classList.toggle('is-focus', REDUCE || p6 > 0.72);
   }
   const p10 = progressOf(s10);
   if (Math.abs(p10 - lastP10) > 0.001) {
     lastP10 = p10;
     // ① 가운데 한 점에서 세 원이 퍼져 나온다 → ② 겹친 가운데가 커지며 Casted Media 가 그 안에 선다
-    const e1 = REDUCE ? 1 : ease(clamp01(p10 / 0.24));      // v7: 확장 → 가운데 확대를 앞쪽에 끝내고
-    const e2 = REDUCE ? 1 : ease(clamp01((p10 - 0.3) / 0.28));   // 0.58 이후는 Casted Media 가 머무는 구간
-    const d = 70 * e1 + (26 - 70) * e2;
-    const r = 34 + (112 - 34) * e1 + (168 - 112) * e2;
+    const e1 = REDUCE ? 1 : ease(clamp01(p10 / 0.22));           // 세 원이 퍼져 벤 다이어그램이 된다
+    const e2 = REDUCE ? 1 : ease(clamp01((p10 - 0.52) / 0.32));  // 0928: 다이어그램을 충분히 보여준 뒤(0.22~0.52 유지) 가운데 주황 영역이 크게 확장
+    const d = 70 * e1 + (14 - 70) * e2;
+    const r = 34 + (112 - 34) * e1 + (196 - 112) * e2;
     for (const k of ['A', 'B', 'C']) {
       const [dx, dy] = DIRS[k];
       const cx = VC.x + dx * d, cy = VC.y + dy * d;

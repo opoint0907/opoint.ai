@@ -47,12 +47,12 @@
         images: ['https://www.youtube.com/watch?v=EBLdmsJK37U|assets/vs/visualstudio.mp4'] },  // 0922 최종: 유튜브 무음 자동재생 (원본 02_회사소개서/z_visualstudio/final.mp4)
       // 05장 — 영상 2개 : 신규 기능
       s05_video_a: { tag: '영상', spec: '신규 기능', ratio: '1 / 1', mode: 'columns', dir: 1,
-        caption: FILM, images: [L(1), L(3), L(5), L(7), L(9)].filter(Boolean) },
+        caption: false, images: [L(1), L(3), L(5), L(7), L(9)].filter(Boolean) },
       s05_video_b: { tag: '영상', spec: '신규 기능', ratio: '1 / 1', mode: 'columns', dir: -1,
-        caption: 'AI 영상 — USMEF A.I. Creative Campaign · AI 브랜드필름', images: [img(usmef, 0), img(usmef, 1), L(2), L(4), L(8)].filter(Boolean) },
+        caption: false, images: [img(usmef, 0), img(usmef, 1), L(2), L(4), L(8)].filter(Boolean) },
       // 07장 — 브랜드 필름 샘플
       s07_film: { tag: '영상', spec: '브랜드 필름', ratio: '16 / 9', mode: 'single', sound: true,
-        caption: FILM, images: ['assets/film/brand_film.mp4'] },
+        caption: false, poster: 'assets/film/brand_poster.jpg', images: ['assets/film/brand_film.mp4'] },   // 0928: 캡션 삭제 · 로딩 중 첫 프레임 스틸
       // 13장 — 로고 영상 / 크루 4인 이미지   (02_회사소개서/3. OPOINT IP/13_로고영상_크루4인)
       s13_video: { tag: '영상', spec: '로고 영상 ／ 크루 4인 이미지', ratio: '16 / 9', mode: 'reveal',
         caption: 'OPOINT IP — CREW 4 · RAM · CHLOE · ILYR · YEON', hold: 0.25,
@@ -60,10 +60,10 @@
         images: ['assets/ip/char/char_01.webp', 'assets/ip/char/char_02.webp', 'assets/ip/char/char_03.webp', 'assets/ip/char/char_04.webp', 'assets/ip/char/char_05.webp'] },
       // 14장 — 트레일러   (02_회사소개서/3. OPOINT IP/14_트레일러 · 전체 재생은 PLAY TRAILER)
       s14_trailer: { tag: '영상', spec: '트레일러', ratio: '16 / 9', mode: 'single', fit: 'contain', sound: true,
-        caption: 'OPOINT IP — TRAILER', images: ['assets/ip/ip_trailer.mp4'] },   // v8: 트레일러 전체를 화면에 꽉 차게(무음 반복) · 소리는 PLAY TRAILER
+        caption: false, images: ['assets/ip/ip_trailer.mp4'] },   // v8: 트레일러 전체를 화면에 꽉 차게(무음 반복) · 소리는 PLAY TRAILER
       // 15장 — POV 캐릭터 영상 (Opoint 유튜브 · 상은님 지정 순서 그대로 · 썸네일: 02_회사소개서/3. OPOINT IP/15_편성표_설정집 01~08)
       s15_doc: { tag: '영상', spec: '12주 편성표 + 교차곡선 / 설정집 문서 스프레드', ratio: '16 / 9', mode: 'yt',
-        caption: 'OPOINT IP — POV · YOUTUBE',
+        caption: false,
         videos: [
           { id: '4DSAp-jV5_4', thumb: 'assets/ip/pov/pov_01.webp', title: '[O.1] Introduction Q&A - 람 | 오포인트 인터뷰 질의응답', dur: '2:10' },
           { id: 'DUAJUSFGfFw', thumb: 'assets/ip/pov/pov_02.webp', title: '[O.1] Introduction Q&A - 클로이 | 오포인트 인터뷰 질의응답', dur: '2:20' },

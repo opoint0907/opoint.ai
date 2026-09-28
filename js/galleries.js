@@ -11,12 +11,12 @@ const ease = (t) => t * t * (3 - 2 * t);
 const isVideo = (s) => /\.(mp4|webm|mov)(\?|$)/i.test(s);
 const ytOf = (s = '') => (String(s).match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/) || [])[1] || '';
 // 유튜브 주소면 무음 자동재생·반복 임베드(스크롤을 막지 않게 클릭은 통과), 아니면 영상/이미지
-const media = (src) => {
+const media = (src, poster = '') => {
   const [url, fb] = String(src).split('|');   // 'YouTube 주소|사이트 안 대체 영상'
   const yt = ytOf(url);
   if (yt) return `<div class="g-media g-yt-embed">${fb ? `<video class="yt-fallback" src="${esc(fb)}" muted loop playsinline autoplay preload="auto"></video>` : ''}<iframe src="https://www.youtube.com/embed/${yt}?autoplay=1&mute=1&loop=1&playlist=${yt}&controls=0&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&cc_lang_pref=none&enablejsapi=1&origin=${encodeURIComponent(location.origin)}" title="YouTube" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1"></iframe></div>`;
   return isVideo(src)
-    ? `<video class="g-media" src="${esc(src)}" muted loop playsinline autoplay preload="metadata" data-lazyplay></video>`
+    ? `<video class="g-media" src="${esc(src)}"${poster ? ` poster="${esc(poster)}"` : ''} muted loop playsinline autoplay preload="${poster ? 'auto' : 'metadata'}" data-lazyplay></video>`
     : `<img class="g-media" src="${esc(src)}" alt="" loading="lazy">`;
 };
 const pad = (n) => String(n).padStart(2, '0');
@@ -52,7 +52,7 @@ function buildInner(fig, cfg, { mountDrum }) {
   const mode = cfg.mode || 'stack';
   const n = items.length;
   const label = cfg.caption ? esc(cfg.caption) : `[ 교체 ] ${esc(cfg.tag || '')} — ${esc(cfg.spec || '')}`;
-  const cap = `<figcaption class="mono g-cap${cfg.caption ? ' is-real' : ''}"><span>${label}</span><span class="g-count">01 / ${pad(n)}</span></figcaption>`;
+  const cap = cfg.caption === false ? '' : `<figcaption class="mono g-cap${cfg.caption ? ' is-real' : ''}"><span>${label}</span><span class="g-count">01 / ${pad(n)}</span></figcaption>`;   // caption:false → 캡션 없음 (0928)
   fig.className = `slot g-${mode}${fig.classList.contains('wide') ? ' wide' : ''}`;
   fig.style.setProperty('--ratio', `${rw} / ${rh}`);
   fig.style.setProperty('--ar', (rw / rh).toFixed(4));
@@ -67,7 +67,7 @@ function buildInner(fig, cfg, { mountDrum }) {
   }
 
   if (mode === 'single') {    // 한 편을 크게 가운데(13장: 크루 4인)
-    fig.innerHTML = `<div class="g-frame single-frame${cfg.fit === 'contain' ? ' is-contain' : ''}">${media(items[0])}</div>${cap.replace(/<span class="g-count">.*?<\/span>/, '')}`;
+    fig.innerHTML = `<div class="g-frame single-frame${cfg.fit === 'contain' ? ' is-contain' : ''}">${media(items[0], cfg.poster)}</div>${cap.replace(/<span class="g-count">.*?<\/span>/, '')}`;
     return;
   }
 
