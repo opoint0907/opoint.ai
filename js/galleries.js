@@ -98,7 +98,7 @@ function buildInner(fig, cfg, { mountDrum }) {
       const p = REDUCE ? 0 : pinned(fig, sticky);
       const travel = Math.max(0, track.scrollWidth - sticky.clientWidth);
       track.style.transform = `translate3d(${-p * travel}px, 0, 0)`;
-      count.textContent = `${pad(Math.min(m, Math.floor(p * m * 0.999) + 1))} / ${pad(m)}`;
+      if (count) count.textContent = `${pad(Math.min(m, Math.floor(p * m * 0.999) + 1))} / ${pad(m)}`;
       // 화면에 들어온 카드만 무음 자동재생(유튜브 임베드)으로 바꾼다 — 한 번 붙이면 유지
       const fr = fig.getBoundingClientRect();
       if (fr.top > innerHeight || fr.bottom < 0 || fig.classList.contains('yt-blocked')) return;
@@ -145,7 +145,7 @@ function buildInner(fig, cfg, { mountDrum }) {
           c.style.filter = `brightness(${1 - k * 0.22})`;
         }
       });
-      count.textContent = `${pad(Math.min(n, Math.round(f) + 1))} / ${pad(n)}`;
+      if (count) count.textContent = `${pad(Math.min(n, Math.round(f) + 1))} / ${pad(n)}`;
     } });
     return;
   }
@@ -161,7 +161,7 @@ function buildInner(fig, cfg, { mountDrum }) {
       const travel = Math.max(0, track.offsetHeight - frame.offsetHeight);
       const q = dir === 1 ? p : 1 - p;
       track.style.transform = `translate3d(0, ${-q * travel}px, 0)`;
-      count.textContent = `${pad(Math.min(n, Math.floor(q * n * 0.999) + 1))} / ${pad(n)}`;
+      if (count) count.textContent = `${pad(Math.min(n, Math.floor(q * n * 0.999) + 1))} / ${pad(n)}`;
     } });
     return;
   }
@@ -188,8 +188,8 @@ function buildInner(fig, cfg, { mountDrum }) {
         }
         m.style.transform = `scale(${1.16 - 0.16 * e})`;
       });
-      count.textContent = `${pad(Math.min(n, Math.floor(s * 0.999) + 1))} / ${pad(n)}`;
-      if (capCount) capCount.textContent = count.textContent;
+      if (count) count.textContent = `${pad(Math.min(n, Math.floor(s * 0.999) + 1))} / ${pad(n)}`;
+      if (capCount && count) capCount.textContent = count.textContent;
       bar.style.transform = `scaleX(${p})`;
     } });
     return;
@@ -204,7 +204,7 @@ function buildInner(fig, cfg, { mountDrum }) {
     const p = REDUCE ? 0 : pinned(fig, sticky);
     const travel = Math.max(0, track.scrollWidth - sticky.clientWidth);
     track.style.transform = `translate3d(${-p * travel}px, 0, 0)`;
-    count.textContent = `${pad(Math.min(n, Math.floor(p * n * 0.999) + 1))} / ${pad(n)}`;
+    if (count) count.textContent = `${pad(Math.min(n, Math.floor(p * n * 0.999) + 1))} / ${pad(n)}`;
   } });
 }
 
@@ -254,7 +254,7 @@ let soundOn = false;
 function addSound(fig) {
   const frame = fig.querySelector('.g-frame') || fig;
   const b = document.createElement('button');
-  b.type = 'button'; b.className = 'sound-btn mono'; b.textContent = 'SOUND OFF';
+  b.type = 'button'; b.className = 'sound-btn mono'; b.textContent = 'SOUND ON';   // 0928: 무음일 때 'SOUND ON'(켜기), 소리 날 때 'SOUND OFF'(끄기)
   b.addEventListener('click', (e) => { e.stopPropagation(); soundOn = !soundOn; syncSound(); });
   frame.appendChild(b);
   soundFigs.push(fig);
@@ -273,7 +273,7 @@ function syncSound() {
     const on = soundOn && fig === best;
     fig.querySelectorAll('video').forEach((v) => { v.muted = !on; if (on && v.paused) v.play().catch(() => {}); });
     fig.querySelectorAll('.g-yt-embed iframe').forEach((f) => { if (on) { ytSend(f, 'unMute'); ytSend(f, 'setVolume', [100]); } else ytSend(f, 'mute'); });
-    const b = fig.querySelector('.sound-btn'); if (b) { b.textContent = soundOn ? 'SOUND ON' : 'SOUND OFF'; b.classList.toggle('on', soundOn); }
+    const b = fig.querySelector('.sound-btn'); if (b) { b.textContent = on ? 'SOUND OFF' : 'SOUND ON'; b.classList.toggle('on', on); }
   });
 }
 const firstGesture = () => { if (!soundOn) { soundOn = true; syncSound(); } removeEventListener('pointerdown', firstGesture, true); removeEventListener('keydown', firstGesture, true); };
