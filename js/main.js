@@ -398,7 +398,7 @@ function scrollFx() {
       const cx = VC.x + dx * d, cy = VC.y + dy * d;
       $$(`.c${k}`, s10).forEach((c) => { c.setAttribute('cx', cx.toFixed(2)); c.setAttribute('cy', cy.toFixed(2)); c.setAttribute('r', r.toFixed(2)); });
       const t = $(`.t${k}`, s10);
-      const L = d + r * (0.55 + 0.25 * e2);
+      const L = d + r * (0.55 + 0.42 * e2);   // 0928: 확장된 주황 영역 밖으로 라벨을 밀어낸다
       t.setAttribute('x', (VC.x + dx * L).toFixed(1));
       t.setAttribute('y', (VC.y + dy * L + 4).toFixed(1));
     }
