@@ -392,7 +392,7 @@ main, .hdr { position: relative; z-index: 1; }
   .cats, .flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cats li, .cats li + li, .flow li, .flow li + li { padding-left: 0; border-left: 0; padding-right: 12px; }
   .flow li:not(:last-child)::after { display: none; }
-  .nm-bracket { margin-left: 0; width: 100%; }
+  .nm-bracket, #s06 .nm-bracket { margin-left: 0; width: 100%; }
   .pin, .pin.pin-l { height: auto; padding-block: clamp(96px, 14vh, 160px); }
   .pin-inner { position: relative; min-height: 0; padding-block: 0; }
   .map-link { transform: scaleY(var(--q, 1)); transform-origin: top; }
@@ -688,7 +688,7 @@ main, .hdr { position: relative; z-index: 1; }
 .chapter .giant { color: color-mix(in srgb, var(--ch) 16%, transparent); }
 .sec[data-ch] .sec-title { color: var(--ch); }
 .sec[data-ch] .sec-title::before { background: var(--ch); }
-#s06 .nm-bracket { border-color: var(--c-nm); }
+#s06 .nm-bracket { border-color: var(--c-nm); width: 50%; max-width: none; margin-left: 50%; margin-right: 0; }   /* 0928: 끝 두 칸(NEW MEDIA)만 감싼다 */
 #s06 .nm-bracket span { color: var(--c-nm); border-color: var(--c-nm); }
 #s06 .cats .nm::after { background: var(--c-nm); }
 .is-focus .cats .nm { background: color-mix(in srgb, var(--c-nm) 18%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-nm) 55%, transparent); }
