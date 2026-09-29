@@ -2,20 +2,21 @@ REFERENCES
 - @Image 1: take ONLY Chloe's face, hair, rabbit ears, white iridescent goggles, blue pendant necklace and pink jacket, drawn once as a single person. Take nothing else.
 - @Image 2: take ONLY Ping-Ping's design, drawn once as a single robot, not as a sheet or grid of views. Take nothing else.
 - @Image 3: take ONLY the room: the O.Point base lounge. Take nothing else.
+- @Image 4: take ONLY the blanket. Take nothing else.
 
-SHOT: a quiet handheld selfie of Chloe holding Ping-Ping against her cheek with her eyes closed, while, unseen by her, a small glowing hologram panel has popped up just above Ping-Ping's antenna ball.
+SHOT: evening in the lounge: Chloe has fallen asleep on the sofa under her blanket, and the recovered Ping-Ping rests on top of the blanket on her lap, while, unseen by her, a small glowing hologram panel has popped up above its antenna ball.
 
 CAST LOCK: exactly one young woman (Chloe) and exactly one small floating robot (Ping-Ping), no one else, nobody passes in the background.
 
 CHLOE: from @Image 1 — wavy short pink-and-mint hair with bangs, the side hair covering both sides of her face, a pair of fluffy pink rabbit ears standing upright on her head, large grey eyes, rosy cheeks, a blue pendant necklace, pink jacket with mint shoulder panels and a small O. emblem on the chest.
-Chloe's pose: The camera is the phone itself: only her extended right arm enters from the lower right frame edge and no phone is visible. Her left hand holds Ping-Ping against her left cheek; her eyes are fully closed and she smiles softly; the white goggles with iridescent lenses hang around her neck; a few specks of fine red dust remain in her hair.
+Chloe's pose: half-lying on the lounge sofa, head tilted onto a cushion, eyes closed, a small peaceful smile; the blanket from @Image 4 covers her up to the chest; the white goggles hang around her neck.
 
-PING-PING: from @Image 2, the back of its head resting against Chloe's left cheek while its LED face screen turns toward the camera; its LED face screen shows two small magenta heart-shaped dot eyes grouped in the center of an otherwise dark screen, occupying about a third of the screen; its wings spread; from the antenna ball on top of its head a short thin pink beam rises into a small glowing pink hologram panel filled only with soft horizontal bars of light and a few abstract dots, like an out-of-focus bokeh pattern, with no glyphs or characters of any kind.
+PING-PING: from @Image 2, resting on the blanket over her lap, level and calm, wings folded; its LED face screen shows two small magenta heart-shaped dot eyes grouped in the center of an otherwise dark screen; from the antenna ball on top of its head a short thin pink beam rises into a small glowing pink hologram panel filled only with soft horizontal bars of light and a few abstract dots, like an out-of-focus bokeh pattern, with no glyphs or characters of any kind.
 
-COMPOSITION: 4:5 vertical selfie, 26 mm equivalent. Faces inside the central 3:4 area; the hologram panel floats a short distance above Ping-Ping's antenna ball, beside the tips of her rabbit ears, in the upper third of the frame. Leave the lower fifth calm for a one-line caption.
+COMPOSITION: 4:5 vertical, medium-wide shot, 35 mm equivalent, camera at sofa-seat height from the side, level. Chloe and the sofa across the middle of the frame; Ping-Ping and the hologram panel clearly visible in the center. Leave the lower fifth calm for a one-line caption.
 
-LIGHT & COLOR: bright, airy daytime interior of the lounge from @Image 3; the windows are on the left of the frame, so soft white daylight falls on the left side of Chloe's face and of Ping-Ping; the sky outside the rounded blue-tinted windows is a clear, calm pale butterscotch daytime sky; gentle soft shadows; palette of pastel pink, mint and clean white.
+LIGHT & COLOR: the lounge from @Image 3 in warm early-evening light from the ceiling lamps; the windows are on the left of the frame, so light falls from the left; the sky outside the rounded blue-tinted windows is a calm dusky blue evening sky; gentle soft shadows; palette of pastel pink, mint and clean white.
 
-STYLE: photoreal smartphone photo, natural skin texture, slight lens softness at the edges, like a real photo dump post.
+STYLE: photoreal cinematic still from a slice-of-life film, observed from a distance, nobody looks at the camera; natural skin texture, shallow depth of field.
 
 NO TEXT: apart from the small O. emblem on Chloe's jacket, no text, letters, numbers or watermarks anywhere in the image.

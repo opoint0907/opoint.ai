@@ -1,5 +1,5 @@
 {
-  "_note": "오포인트 계정(워크스페이스 23be883d-aa3b-4171-8543-946428aff831) 값. 배열 순서 = 프롬프트의 @Image 번호. S1·S3은 정확히 3개, S2만 4개를 보낸다.",
+  "_note": "오포인트 계정(워크스페이스 23be883d-aa3b-4171-8543-946428aff831) 값. 배열 순서 = 프롬프트의 @Image 번호. v2(셀카 없음): S1만 3개, S2·S3은 담요 포함 4개.",
   "model": "nano_banana_pro",
   "aspect_ratio": "4:5",
   "resolution": "2k",
@@ -26,7 +26,8 @@
     "S3": [
       "chloe",
       "pingping",
-      "lounge"
+      "lounge",
+      "blanket"
     ]
   }
 }
