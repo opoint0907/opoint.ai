@@ -130,7 +130,7 @@
     },
 
     // 연락처 — 헤더 CONTACT · 푸터에서 메일 쓰기로 연결 (0917 상은님)
-    contact: { email: 'runboa@opoint.ai', phone: '', address: '' },
+    contact: { email: 'master@opoint.ai', phone: '', address: '' },
   };
 
   /* ── 관리자 페이지(/admin/)가 저장한 값 덮어쓰기 — js/overrides.js ── */
