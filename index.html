@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/style.css?v=20260929b">
+<link rel="stylesheet" href="css/style.css?v=20260929c">
 <script type="importmap">
 { "imports": {
   "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
@@ -144,7 +144,6 @@
     <h2 class="sec-title">NEW MEDIA</h2>
     <p class="lede">브랜드 세계관을 AI로 형상화 하고 광고 영상을 제작합니다.</p>
     <figure class="slot wide" data-slot="s07_film"></figure>
-    <button class="film-play mono" id="filmPlay" type="button" data-film="film"><span class="tri" aria-hidden="true"></span>PLAY FILM<span class="dim" data-len></span></button>
   </section>
 
   <!-- 08 -->
@@ -203,11 +202,11 @@
     <h2 class="sec-title">NEW MEDIA</h2>
     <p class="lede">SNS 피드는 자동으로 운영되며 메신저 피드백을 통해 완성됩니다.</p>
     <ol class="flow">
-      <li><span class="who ai mono">AI</span><span class="no mono">01</span><strong>페르소나<br>AI 설계</strong><span class="d">톤·세계관·행동양식을<br>AI에 학습시켜 고정</span></li>
-      <li><span class="who ai mono">AI</span><span class="no mono">02</span><strong>AI 자율 기획·<br>제작 자동화</strong><span class="d">데일리 콘텐츠를 AI가<br>기획하고 이미지·카피 생성</span></li>
-      <li><span class="who mono">OPOINT</span><span class="no mono">03</span><strong>데일리 제작물<br>검수·컨펌</strong><span class="d">발행 전 검수·승인하는<br>통제 게이트 운영</span></li>
-      <li><span class="who mono">OPOINT x 광고주</span><span class="no mono">04</span><strong>피드백 반영·<br>콘텐츠 최종화</strong><span class="d">수정사항을 메신저로<br>AI에 전달 → 반영 후 재보고</span></li>
-      <li><span class="who mono">OPOINT</span><span class="no mono">05</span><strong>계정별 콘텐츠<br>자동 발행</strong><span class="d">승인된 콘텐츠만<br>각 페르소나 인스타에 발행</span></li>
+      <li><span class="who ai mono">AI</span><span class="no mono">01</span><strong>페르소나 AI 설계</strong><span class="d">톤·세계관·행동양식을<br>AI에 학습시켜 고정</span></li>
+      <li><span class="who ai mono">AI</span><span class="no mono">02</span><strong>AI 자율 기획·제작 자동화</strong><span class="d">데일리 콘텐츠를 AI가<br>기획하고 이미지·카피 생성</span></li>
+      <li><span class="who mono">OPOINT</span><span class="no mono">03</span><strong>데일리 제작물 검수·컨펌</strong><span class="d">발행 전 검수·승인하는<br>통제 게이트 운영</span></li>
+      <li><span class="who mono">OPOINT x 광고주</span><span class="no mono">04</span><strong>피드백 반영·콘텐츠 최종화</strong><span class="d">수정사항을 메신저로<br>AI에 전달 → 반영 후 재보고</span></li>
+      <li><span class="who mono">OPOINT</span><span class="no mono">05</span><strong>계정별 콘텐츠 자동 발행</strong><span class="d">승인된 콘텐츠만<br>각 페르소나 인스타에 발행</span></li>
     </ol>
     <div class="loop">
       <div class="loop-steps">
@@ -335,7 +334,7 @@
   </footer>
 </main>
 
-<dialog class="work-box" id="workBox" aria-labelledby="workTitle">
+<dialog class="work-box" id="workBox" aria-labelledby="workTitle" data-lenis-prevent>
   <div class="work-inner">
     <div class="work-top mono"><span id="workMeta"></span><button type="button" id="workClose">CLOSE ✕</button></div>
     <h3 id="workTitle"></h3>
@@ -344,17 +343,17 @@
   </div>
 </dialog>
 
-<dialog class="film-box" id="filmBox" aria-label="브랜드 필름">
+<dialog class="film-box" id="filmBox" aria-label="브랜드 필름" data-lenis-prevent>
   <div class="film-inner">
     <div class="film-top mono"><span id="filmTitle"></span><button type="button" id="filmClose">CLOSE ✕</button></div>
     <video id="filmVideo" controls playsinline preload="none"></video>
   </div>
 </dialog>
 
-<script src="js/portfolio-data.js?v=20260929b"></script>
-<script src="js/overrides.js?v=20260929b"></script>
-<script src="js/content.js?v=20260929b"></script>
+<script src="js/portfolio-data.js?v=20260929c"></script>
+<script src="js/overrides.js?v=20260929c"></script>
+<script src="js/content.js?v=20260929c"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-<script type="module" src="js/main.js?v=20260929b"></script>
+<script type="module" src="js/main.js?v=20260929c"></script>
 </body>
 </html>

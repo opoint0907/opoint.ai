@@ -14,6 +14,9 @@ const ytOf = (s = '') => (String(s).match(/(?:youtu\.be\/|youtube\.com\/(?:watch
 const media = (src, poster = '') => {
   const [url, fb] = String(src).split('|');   // 'YouTube 주소|사이트 안 대체 영상'
   const yt = ytOf(url);
+  // 0929: 모바일·터치 기기에서는 유튜브 임베드 자동재생이 막히는 경우가 많아 사이트 안 영상(mp4)을 바로 쓴다
+  const MOBILE = matchMedia('(max-width: 900px)').matches || matchMedia('(pointer: coarse)').matches;
+  if (yt && fb && MOBILE) return `<video class="g-media" data-src="${esc(fb)}" muted loop playsinline autoplay preload="auto" data-lazyplay></video>`;
   if (yt) return `<div class="g-media g-yt-embed">${fb ? `<video class="yt-fallback" data-src="${esc(fb)}" muted loop playsinline autoplay preload="auto"></video>` : ''}<iframe src="https://www.youtube.com/embed/${yt}?autoplay=1&mute=1&loop=1&playlist=${yt}&controls=0&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&cc_lang_pref=none&enablejsapi=1&origin=${encodeURIComponent(location.origin)}" title="YouTube" allow="autoplay; encrypted-media; picture-in-picture" tabindex="-1"></iframe></div>`;
   return isVideo(src)
     ? `<video class="g-media" data-src="${esc(src)}"${poster ? ` poster="${esc(poster)}"` : ''} muted loop playsinline autoplay preload="${poster ? 'auto' : 'metadata'}" data-lazyplay></video>`
@@ -95,9 +98,10 @@ function buildInner(fig, cfg, { mountDrum }) {
       }
     });
     live.push({ fig, update() {
-      const p = REDUCE ? 0 : pinned(fig, sticky);
+      const NARROW = matchMedia('(max-width: 900px)').matches;
+      const p = (REDUCE || NARROW) ? 0 : pinned(fig, sticky);
       const travel = Math.max(0, track.scrollWidth - sticky.clientWidth);
-      track.style.transform = `translate3d(${-p * travel}px, 0, 0)`;
+      track.style.transform = NARROW ? 'none' : `translate3d(${-p * travel}px, 0, 0)`;   // 0929: 모바일은 네이티브 가로 스크롤
       if (count) count.textContent = `${pad(Math.min(m, Math.floor(p * m * 0.999) + 1))} / ${pad(m)}`;
       // 화면에 들어온 카드만 무음 자동재생(유튜브 임베드)으로 바꾼다 — 한 번 붙이면 유지
       const fr = fig.getBoundingClientRect();

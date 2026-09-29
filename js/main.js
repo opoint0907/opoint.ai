@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { SYMBOL_SVG, WORDMARK_SVG } from './logo-paths.js?v=20260929b';
-import { ringHullTextures, dotHullTextures, haloTexture } from './hull-texture.js?v=20260929b';
-import { Drums } from './drum.js?v=20260929b';
-import { buildGallery, updateGalleries } from './galleries.js?v=20260929b';
+import { SYMBOL_SVG, WORDMARK_SVG } from './logo-paths.js?v=20260929c';
+import { ringHullTextures, dotHullTextures, haloTexture } from './hull-texture.js?v=20260929c';
+import { Drums } from './drum.js?v=20260929c';
+import { buildGallery, updateGalleries } from './galleries.js?v=20260929c';
 
 const GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789✺';
 const C = window.OPOINT || { slots: {}, works: { youtube: [], image: [] } };
@@ -53,6 +53,12 @@ const filmBox = $('#filmBox');
 const filmVideo = $('#filmVideo');
 const fmt = (d) => `${String((d / 60) | 0).padStart(2, '0')}:${String(Math.round(d) % 60).padStart(2, '0')}`;
 $$('[data-film]').forEach((btn) => {
+  const fx = C[btn.dataset.film];
+  if (fx && fx.watch) {   // 0929: 유튜브 주소가 있으면 레이어 대신 새 창으로 연다
+    btn.addEventListener('click', () => window.open(fx.watch, '_blank', 'noopener'));
+    const dim = btn.querySelector('[data-len]'); if (dim) dim.textContent = ' YOUTUBE ↗';
+    return;
+  }
   const f = C[btn.dataset.film];
   if (!f || !filmBox) { btn.hidden = true; return; }
   btn.addEventListener('click', () => {
@@ -298,7 +304,7 @@ $$('[data-scramble]').forEach((a) => {
 
 /* ════════════════════ 3. 스크롤 (Lenis) ════════════════════ */
 
-const lenis = !REDUCE && window.Lenis ? new window.Lenis({ lerp: 0.09, wheelMultiplier: 0.9 }) : null;
+const lenis = !REDUCE && window.Lenis ? new window.Lenis({ lerp: 0.09, wheelMultiplier: 0.9, prevent: (node) => !!(node.closest && node.closest('dialog')) }) : null;   // 0929: 팝업(dialog) 안에서는 휠·터치 스크롤을 Lenis가 가로채지 않는다
 window.__opointScroll = lenis;          // 점검용 핸들
 document.addEventListener('click', (e) => {
   const a = e.target.closest('[data-nav]');
