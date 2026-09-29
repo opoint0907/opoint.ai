@@ -1,21 +1,21 @@
 REFERENCES
 - @Image 1: take ONLY Chloe's face, hair, rabbit ears, white iridescent goggles, blue pendant necklace and pink jacket, drawn once as a single person. Take nothing else.
-- @Image 2: take ONLY Ping-Ping's design, drawn once as a single robot, not as a sheet or grid of views. Take nothing else.
+- @Image 2: take ONLY Ping-Ping's design as one single robot in one pose. Take nothing else.
 - @Image 3: take ONLY the room: the O.Point base lounge. Take nothing else.
 
-SHOT: back in the lounge after an exploration trip, Chloe has just dropped her pink backpack by the sofa and turns in alarm as Ping-Ping wobbles in mid-air, fine red sand trickling from its ear onto the floor.
+SHOT: Chloe has just walked back into the lounge after an exploration trip and turns in alarm as Ping-Ping wobbles in mid-air in front of her, a few grains of red sand drifting from its ear.
 
-CAST LOCK: exactly one young woman (Chloe) and exactly one small floating robot (Ping-Ping), no one else, nobody passes in the background.
+CAST LOCK: exactly one young woman (Chloe) and exactly one small floating robot (Ping-Ping). The lounge is otherwise empty and still.
 
-CHLOE: from @Image 1 — wavy short pink-and-mint hair with bangs, the side hair covering both sides of her face, a pair of fluffy pink rabbit ears standing upright on her head, large grey eyes, rosy cheeks, a blue pendant necklace, pink jacket with mint shoulder panels and a small O. emblem on the chest.
-Chloe's pose: standing in the middle of the lounge, body turned three-quarters toward Ping-Ping, both hands half-raised as if to catch it, eyebrows raised, mouth slightly open; the white goggles hang around her neck; light red dust on her sleeves and in her hair from the trip; a pink hard-shell backpack with a mint frame sits on the floor by her feet.
+CHLOE: from @Image 1 — wavy short pink-and-mint hair with bangs, the side hair covering both sides of her face, a pair of fluffy pink rabbit ears standing upright on her head, rosy cheeks, a blue pendant necklace, pink jacket with mint shoulder panels and a small O. emblem on the chest. Large grey eyes.
+Chloe's pose: standing in the middle of the lounge, body turned three-quarters toward Ping-Ping and away from the camera, both hands half-raised as if to catch it, eyebrows raised, mouth slightly open, eyes on Ping-Ping; the white goggles hang around her neck; light red dust on her sleeves and in her hair from the trip.
 
-PING-PING: from @Image 2, floating at her chest height about one metre in front of her, tilted about 20 degrees to one side, its small wings drooping; its LED face screen shows a simple sad face made of a few small magenta dots grouped in the center of an otherwise dark screen; a thin trickle of fine red sand spills from one transparent rabbit ear down to a small red heap on the floor.
+PING-PING: from @Image 2, floating at her chest height about one metre in front of her, tilted about 20 degrees to one side, its small wings drooping; its LED face screen shows a simple sad face made of a few small magenta dots grouped in the center of an otherwise dark screen; a few grains of fine red sand drift down from one transparent rabbit ear, with a small red sprinkle on the floor below and clear air between the robot and the floor.
 
 COMPOSITION: 4:5 vertical, wide shot, 28 mm equivalent, camera at chest height from the far side of the lounge, level. Chloe full body in the right half, Ping-Ping in the left half, the lounge windows behind them. Leave the upper fifth as calm wall and window for a two-line caption.
 
 LIGHT & COLOR: the lounge from @Image 3 in soft late-afternoon daylight; the windows are on the left of the frame, so light falls from the left; the sky outside the rounded blue-tinted windows is a clear, calm pale butterscotch daytime sky; gentle soft shadows; palette of pastel pink, mint and clean white.
 
-STYLE: photoreal cinematic still from a slice-of-life film, observed from a distance, nobody looks at the camera; natural skin texture, shallow depth of field.
+STYLE: photoreal cinematic still from a slice-of-life film, observed from across the room; nobody looks at the camera; natural skin texture, shallow depth of field.
 
 NO TEXT: apart from the small O. emblem on Chloe's jacket, no text, letters, numbers or watermarks anywhere in the image.

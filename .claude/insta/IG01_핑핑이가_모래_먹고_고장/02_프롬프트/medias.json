@@ -1,15 +1,15 @@
 {
-  "_note": "오포인트 계정(워크스페이스 23be883d-aa3b-4171-8543-946428aff831) 값. 배열 순서 = 프롬프트의 @Image 번호. v2(셀카 없음): S1만 3개, S2·S3은 담요 포함 4개.",
+  "_note": "회사 계정(ultra, 워크스페이스 3c86addd-ee92-4062-92ea-e13c162099af) 값. 무료 오포인트 계정의 char_o4_* 원본 이미지를 media_import_url로 불러온 것. 배열 순서 = @Image 번호.",
   "model": "nano_banana_pro",
   "aspect_ratio": "4:5",
   "resolution": "2k",
   "count": 1,
   "cost_per_image_credits": 2,
   "ids": {
-    "chloe": "b4708776-cb99-41f9-9dc3-a46bff999398",
-    "pingping": "b6d12441-4b97-4fcc-b2ff-c90b0a4ebb4a",
-    "lounge": "dea68f57-ee88-4c0b-bc62-6718f5be3e7f",
-    "blanket": "a55528e0-86c3-4cf4-98da-97430538158f"
+    "chloe": "1457b7d4-9d62-41c9-b594-513f3ba17de1",
+    "pingping": "49dfbb7e-adf6-4afa-86b2-e38209f8c353",
+    "lounge": "4ea05507-8568-4992-baf8-2dd7c744979b",
+    "blanket": "28b5c60c-ce81-4a43-a469-cf775d8b5b12"
   },
   "medias_per_slide": {
     "S1": [
@@ -29,5 +29,11 @@
       "lounge",
       "blanket"
     ]
+  },
+  "ids_free_account_origin": {
+    "chloe": "b4708776-cb99-41f9-9dc3-a46bff999398",
+    "pingping": "b6d12441-4b97-4fcc-b2ff-c90b0a4ebb4a",
+    "lounge": "dea68f57-ee88-4c0b-bc62-6718f5be3e7f",
+    "blanket": "a55528e0-86c3-4cf4-98da-97430538158f"
   }
 }
