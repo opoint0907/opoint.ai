@@ -56,7 +56,7 @@ opoint-chloe-insta/
 - 장마다 장소 안의 위치나 시간대도 바꿔서, 3장이 한 이야기의 시작·중간·끝으로 읽히게 한다
 
 - **모델은 `gpt_image_2`가 기본** (2026-09-29 상은님 지시). 상은님이 다른 모델을 직접 말할 때만 바꾼다
-- 설정: `resolution: "2k"`, `quality: "high"`, `aspect_ratio: "3:4"`
+- 설정: `resolution: "2k"`, `quality: "medium"`, `aspect_ratio: "3:4"` (2026-09-29 상은님 지정)
 - `gpt_image_2`는 **4:5를 지원하지 않는다.** 3:4로 생성하고 편집에서 위아래를 조금 잘라 4:5(1080×1350)로 맞춘다. 그래서 프롬프트 구도에서 **위아래 각 5%에는 중요한 것을 두지 않는다**
 - 레퍼런스 `medias`의 role은 `image` (nano_banana의 `image_references`와 다름)
 - 비용: 2k·high 장당 6.5크레딧 / 2k·medium 장당 2크레딧 (2026-09-29 기준). 저해상도 테스트 단계는 없다
