@@ -80,7 +80,7 @@
     // 07장 — 전체 재생용 원본(소리 포함)
     film: { src: 'assets/film/brand_film.mp4', poster: 'assets/film/brand_poster.jpg', title: 'AI 브랜드필름 (회사소개서 ver.)' },
     // 14장 — 트레일러 전체 재생(소리 포함)
-    trailer: { src: 'assets/ip/ip_trailer.mp4', poster: 'assets/ip/ip_trailer.jpg', title: 'OPOINT IP — 트레일러' },
+    trailer: { src: 'assets/ip/ip_trailer.mp4', poster: 'assets/ip/ip_trailer.jpg', title: 'OPOINT IP — 트레일러', watch: 'https://www.youtube.com/watch?v=yohGQDTd2rY&t=13s' },
 
     // 08장 — AI 모델 브랜드 에셋 (소개서 원본 이미지) + 페르소나별 라이프스타일 컷
     assets08: {
