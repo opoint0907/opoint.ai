@@ -960,8 +960,13 @@ body[data-ch="ign"] { --pch: var(--c-ign); }
 .hdr-right .pill { display: inline-flex; align-items: center; height: 28px; box-sizing: border-box; }
 .hdr-yt { gap: 7px; }
 .hdr-yt .yt-ico { width: 14px; height: auto; fill: currentColor; display: block; }
-.foot-row .foot-privacy { font-family: var(--f-ko); text-transform: none; letter-spacing: 0; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--rule); }
-.foot-row .foot-privacy:hover { border-bottom-color: var(--ink); }
+.foot-row { align-items: flex-end; }
+.foot-legal { display: grid; gap: 4px; font-size: 13px; line-height: 1.7; color: var(--ink-2); }
+.foot-legal p { margin: 0; }
+.foot-legal a { color: inherit; }
+.foot-legal .foot-privacy { color: var(--ink); font-weight: 600; font-size: 14px; margin-bottom: 6px; justify-self: start; }
+.foot-legal .foot-privacy:hover { text-decoration: underline; }
+.foot-legal .mono { margin-top: 6px; }
 @media (max-width: 640px) {
   .hdr-yt span { display: none; }
   .hdr-yt { padding: 5px 9px; }
