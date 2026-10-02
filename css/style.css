@@ -955,3 +955,13 @@ body[data-ch="ign"] { --pch: var(--c-ign); }
 #s07 .single-frame { width: 100%; background: #000; }
 #s07 .single-frame .g-media { width: 100%; height: 100%; object-fit: cover; display: block; }
 #s07 .slot.wide { width: min(100%, 1280px, calc((100vh - 330px) * 16 / 9)); margin-inline: auto; }
+
+/* 1002: 헤더 유튜브 버튼 · 푸터 개인정보처리방침 링크 */
+.hdr-yt { display: inline-flex; align-items: center; gap: 7px; }
+.hdr-yt .yt-ico { width: 14px; height: auto; fill: currentColor; display: block; }
+.foot-row .foot-privacy { font-family: var(--f-ko); text-transform: none; letter-spacing: 0; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--rule); }
+.foot-row .foot-privacy:hover { border-bottom-color: var(--ink); }
+@media (max-width: 640px) {
+  .hdr-yt span { display: none; }
+  .hdr-yt { padding: 5px 9px; }
+}
