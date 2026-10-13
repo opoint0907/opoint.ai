@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
-import { SYMBOL_SVG, WORDMARK_SVG } from './logo-paths.js?v=20261013a';
-import { ringHullTextures, dotHullTextures, haloTexture } from './hull-texture.js?v=20261013a';
-import { Drums } from './drum.js?v=20261013a';
-import { buildGallery, updateGalleries } from './galleries.js?v=20261013a';
+import { SYMBOL_SVG, WORDMARK_SVG } from './logo-paths.js?v=20261013b';
+import { ringHullTextures, dotHullTextures, haloTexture } from './hull-texture.js?v=20261013b';
+import { Drums } from './drum.js?v=20261013b';
+import { buildGallery, updateGalleries } from './galleries.js?v=20261013b';
 
 const GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789✺';
 const C = window.OPOINT || { slots: {}, works: { youtube: [], image: [] } };
