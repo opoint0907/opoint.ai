@@ -971,3 +971,6 @@ body[data-ch="ign"] { --pch: var(--c-ign); }
   .hdr-yt span { display: none; }
   .hdr-yt { padding: 5px 9px; }
 }
+
+/* 20261013: 검색엔진용 숨김 텍스트 (화면 비노출) */
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
